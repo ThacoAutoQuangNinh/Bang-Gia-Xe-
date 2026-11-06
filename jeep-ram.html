@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Báo giá lăn bánh Jeep, RAM | ThacoAuto Quảng Ninh</title>
+<style>
+:root{--bg:#f5f6f8;--card:#fff;--tx:#14181f;--mut:#5d6675;--ln:#cfd4db;--hd:#fdf0cf;--ac:#b4231b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101216;--card:#1a1d23;--tx:#eceef2;--mut:#98a1b0;--ln:#343a45;--hd:#3a3220;--ac:#ff6b60;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101216;--card:#1a1d23;--tx:#eceef2;--mut:#98a1b0;--ln:#343a45;--hd:#3a3220;--ac:#ff6b60;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:760px;margin:0 auto;padding:18px 12px 36px}
+.br{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ac)}
+h1{font-size:22px;line-height:1.2;margin:4px 0 12px}
+.sel{display:flex;gap:8px;align-items:center;margin-bottom:14px;font-size:14px;color:var(--mut)}
+.sel select{font:inherit;font-size:16px;padding:8px 10px;border-radius:10px;border:1px solid var(--ln);background:var(--card);color:var(--tx)}
+h2{font-size:17px;text-align:center;margin:20px 0 8px}
+.sc{overflow-x:auto;border:1px solid var(--ln);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:100%}
+th,td{border-bottom:1px solid var(--ln);padding:9px 10px;text-align:right;font-size:14px;white-space:nowrap}
+th:first-child,td:first-child{text-align:left;white-space:normal;min-width:150px;position:sticky;left:0;background:var(--card);z-index:1}
+thead th{background:var(--hd);font-size:13px;text-align:center}
+thead th:first-child{background:var(--hd);text-align:left}
+tr.hl td{background:var(--hd);font-weight:700}
+tr.hl td:first-child{background:var(--hd)}
+tr.sv td{color:#0d6b3a}
+tr.tt td{font-weight:800;font-size:15px;background:var(--hd)}
+tr.tt td:first-child{background:var(--hd)}
+tr.tt td:not(:first-child){color:var(--ac)}
+tr:last-child td{border-bottom:0}
+.note{font-size:12.5px;color:var(--mut);line-height:1.55;margin-top:18px}
+</style>
+</head>
+<body>
+<div class="w">
+<div class="br">ThacoAuto Quảng Ninh</div>
+<h1>Báo giá lăn bánh Jeep &amp; RAM</h1>
+<div class="sel"><label for="pv">Đăng ký tại</label>
+<select id="pv"><option value="qn" selected>Quảng Ninh</option><option value="hn">Hà Nội</option><option value="hp">Hải Phòng</option><option value="tk">Tỉnh/thành khác</option></select></div>
+<div id="out"></div>
+<p class="note">(*) Tạm tính. Lệ phí trước bạ tính trên giá công bố: Jeep Wrangler (ô tô con) theo mức của địa phương, RAM 1500 (pick-up cabin kép) bằng 60% mức đó. Bảo hiểm vật chất ước tính 1% giá bán sau ưu đãi. Ưu đãi là giá trị gói bảo dưỡng 03 năm/60.000km, quy đổi trừ vào giá. Phí đường bộ và bảo hiểm TNDS của RAM 1500 là mức tham khảo cho xe pick-up. Mức thực tế thay đổi theo quy định, khu vực và chương trình của đại lý; bảng có giá trị trong vòng 7 ngày kể từ ngày báo giá. Liên hệ ThacoAuto Quảng Ninh để nhận báo giá chính xác.</p>
+</div>
+<script>
+var CARS=[
+{name:"JEEP WRANGLER",kind:"con",vs:[{n:"Rubicon",r:3499,s:42,f:3457},{n:"Sahara",r:3299,s:42,f:3257},{n:"Sport",r:2999,s:42,f:2957}]},
+{name:"RAM 1500",kind:"pickup",vs:[{n:"RHO",r:5499,s:59,f:5440},{n:"Rebel (Có Rambox)",r:3799,s:48,f:3751},{n:"Rebel (Không Rambox)",r:3749,s:48,f:3701}]}
+];
+var PV={qn:{rate:.12,plate:140000},hn:{rate:.12,plate:20000000},hp:{rate:.12,plate:20000000},tk:{rate:.10,plate:1000000}};
+var ROAD={con:1560000,pickup:2160000},TNDS={con:480700,pickup:938300},INSPECT=90000;
+function d(x){return Math.round(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g,",")}
+function render(){
+var p=PV[document.getElementById("pv").value],h="";
+CARS.forEach(function(c){
+var rate=c.kind==="pickup"?p.rate*.6:p.rate;
+var pct=(rate*100).toFixed(1).replace(".0","").replace(".",",");
+var cols=c.vs.map(function(v){
+var pub=v.r*1e6,fin=v.f*1e6;
+var tb=pub*rate,vc=fin*.01;
+var tot=fin+tb+p.plate+INSPECT+ROAD[c.kind]+TNDS[c.kind]+vc;
+return{n:v.n,pub:pub,sv:v.s*1e6,fin:fin,tb:tb,vc:vc,tot:tot};
+});
+function row(l,k,cls){return '<tr class="'+(cls||"")+'"><td>'+l+'</td>'+cols.map(function(x){return '<td>'+d(typeof k==="function"?k(x):k)+'</td>'}).join("")+'</tr>'}
+h+='<h2>BÁO GIÁ LĂN BÁNH XE '+c.name+'</h2><div class="sc"><table><thead><tr><th>Phiên bản</th>'+cols.map(function(x){return '<th>'+x.n+'</th>'}).join("")+'</tr></thead><tbody>'
++row("Giá công bố (đã bao gồm VAT)",function(x){return x.pub})
++row("Ưu đãi gói bảo dưỡng 03 năm/60.000km",function(x){return x.sv},"sv")
++row("Giá bán sau ưu đãi",function(x){return x.fin},"hl")
++row("Lệ phí trước bạ ("+pct+"%) *",function(x){return x.tb})
++row("Phí đăng ký biển số *",p.plate)
++row("Phí đăng kiểm *",INSPECT)
++row("Phí lưu hành đường bộ 1 năm",ROAD[c.kind])
++row("Bảo hiểm trách nhiệm dân sự (1 năm) *",TNDS[c.kind])
++row("Bảo hiểm vật chất (1 năm) *",function(x){return x.vc})
++row("TỔNG TIỀN THANH TOÁN",function(x){return x.tot},"tt")
++'</tbody></table></div>';
+});
+document.getElementById("out").innerHTML=h;
+}
+document.getElementById("pv").addEventListener("change",render);
+render();
+</script>
+</body>
+</html>
