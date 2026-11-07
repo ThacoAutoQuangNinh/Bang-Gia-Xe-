@@ -39,7 +39,7 @@ tr:last-child td{border-bottom:0}
 <div class="sel"><label for="pv">Đăng ký tại</label>
 <select id="pv"><option value="qn" selected>Quảng Ninh</option><option value="hn">Hà Nội</option><option value="hp">Hải Phòng</option><option value="tk">Tỉnh/thành khác</option></select></div>
 <div id="out"></div>
-<p class="note">(*) Tạm tính. Lệ phí trước bạ tính trên giá công bố: Jeep Wrangler (ô tô con) theo mức của địa phương, RAM 1500 (pick-up cabin kép) bằng 60% mức đó. Bảo hiểm vật chất ước tính 1% giá bán sau ưu đãi. Ưu đãi là giá trị gói bảo dưỡng 03 năm/60.000km, quy đổi trừ vào giá. Phí đường bộ và bảo hiểm TNDS của RAM 1500 là mức tham khảo cho xe pick-up. Mức thực tế thay đổi theo quy định, khu vực và chương trình của đại lý; bảng có giá trị trong vòng 7 ngày kể từ ngày báo giá. Liên hệ ThacoAuto Quảng Ninh để nhận báo giá chính xác.</p>
+<p class="note">(*) Tạm tính. Lệ phí trước bạ tính trên giá công bố theo mức của địa phương (Quảng Ninh 12%), áp dụng cho cả Jeep Wrangler và RAM 1500. Bảo hiểm vật chất ước tính 1% giá bán sau ưu đãi. Ưu đãi là giá trị gói bảo dưỡng 03 năm/60.000km, quy đổi trừ vào giá. Mức thực tế thay đổi theo quy định, khu vực và chương trình của đại lý; bảng có giá trị trong vòng 7 ngày kể từ ngày báo giá. Liên hệ ThacoAuto Quảng Ninh để nhận báo giá chính xác.</p>
 </div>
 <script>
 var CARS=[
@@ -47,12 +47,12 @@ var CARS=[
 {name:"RAM 1500",kind:"pickup",vs:[{n:"RHO",r:5499,s:59,f:5440},{n:"Rebel (Có Rambox)",r:3799,s:48,f:3751},{n:"Rebel (Không Rambox)",r:3749,s:48,f:3701}]}
 ];
 var PV={qn:{rate:.12,plate:140000},hn:{rate:.12,plate:20000000},hp:{rate:.12,plate:20000000},tk:{rate:.10,plate:1000000}};
-var ROAD={con:1560000,pickup:2160000},TNDS={con:480700,pickup:938300},INSPECT=90000;
+var ROAD={con:1560000,pickup:1560000},TNDS={con:480700,pickup:480700},INSPECT=90000;
 function d(x){return Math.round(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g,",")}
 function render(){
 var p=PV[document.getElementById("pv").value],h="";
 CARS.forEach(function(c){
-var rate=c.kind==="pickup"?p.rate*.6:p.rate;
+var rate=p.rate;
 var pct=(rate*100).toFixed(1).replace(".0","").replace(".",",");
 var cols=c.vs.map(function(v){
 var pub=v.r*1e6,fin=v.f*1e6;
