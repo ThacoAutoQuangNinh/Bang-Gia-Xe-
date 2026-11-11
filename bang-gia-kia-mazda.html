@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bảng giá lăn bánh KIA, Mazda | ThacoAuto Quảng Ninh</title>
+<style>
+:root{--bg:#f5f6f8;--card:#fff;--tx:#14181f;--mut:#5d6675;--ln:#cfd4db;--hd:#fdf0cf;--ac:#b4231b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101216;--card:#1a1d23;--tx:#eceef2;--mut:#98a1b0;--ln:#343a45;--hd:#3a3220;--ac:#ff6b60;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101216;--card:#1a1d23;--tx:#eceef2;--mut:#98a1b0;--ln:#343a45;--hd:#3a3220;--ac:#ff6b60;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:820px;margin:0 auto;padding:18px 12px 36px}
+.br{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ac)}
+h1{font-size:22px;line-height:1.2;margin:4px 0 12px}
+.ctl{display:grid;grid-template-columns:1fr 1fr;gap:10px;background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:12px;margin-bottom:10px}
+.ctl label{font-size:12px;color:var(--mut);display:block;margin-bottom:4px}
+.ctl select{width:100%;font:inherit;font-size:16px;padding:9px 10px;border-radius:10px;border:1px solid var(--ln);background:var(--bg);color:var(--tx)}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:6px}
+.chips button{font:inherit;font-size:14px;color:var(--tx);background:var(--card);border:1px solid var(--ln);border-radius:999px;padding:6px 14px;cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--ac);color:#fff;border-color:var(--ac)}
+h2{font-size:16px;text-align:center;margin:22px 0 8px}
+.sc{overflow-x:auto;border:1px solid var(--ln);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%}
+th,td{border-bottom:1px solid var(--ln);padding:9px 10px;text-align:right;font-size:14px;white-space:nowrap}
+th:first-child,td:first-child{text-align:left;white-space:normal;min-width:150px;position:sticky;left:0;background:var(--card);z-index:1}
+thead th{background:var(--hd);font-size:13px;text-align:center;white-space:normal;min-width:118px;vertical-align:top}
+thead th small{display:block;font-weight:400;color:var(--mut);font-size:11.5px;margin-top:2px}
+thead th:first-child{background:var(--hd);text-align:left}
+tr.hl td,tr.hl td:first-child{background:var(--hd);font-weight:700}
+tr.sv td{color:#0d6b3a}
+tr.tt td,tr.tt td:first-child{font-weight:800;font-size:15px;background:var(--hd)}
+tr.tt td:not(:first-child){color:var(--ac)}
+tr.gf td{white-space:normal;text-align:center;font-size:13px;color:var(--mut)}
+tr.gf td:first-child{text-align:left}
+tr:last-child td{border-bottom:0}
+.note{font-size:12.5px;color:var(--mut);line-height:1.55;margin-top:18px}
+</style>
+</head>
+<body>
+<div class="w">
+<div class="br">ThacoAuto Quảng Ninh</div>
+<h1>Bảng giá lăn bánh KIA, Mazda</h1>
+<div class="chips" id="chips" role="group" aria-label="Lọc theo hãng"></div>
+<div class="ctl">
+<div><label for="prov">Đăng ký tại</label><select id="prov"></select></div>
+<div><label for="model">Dòng xe</label><select id="model"></select></div>
+</div>
+<div id="out"></div>
+<p class="note">(*) Tạm tính. Giá xe lấy từ hai bảng giá đại lý của KIA và Mazda, theo chính sách tháng 11 (chính sách bán hàng áp dụng từ 10/11). Giá bán sau ưu đãi là giá bán cuối trong bảng, chưa gồm quà tặng. Lệ phí trước bạ tính trên giá công bố, bảo hiểm vật chất ước tính 1,2% giá bán (phiên bản có quà tặng BHTV hoặc BHTC thì không tính khoản này), các khoản phí còn lại theo mức do đại lý cung cấp. Xe hybrid hoặc xe điện có thể được tính trước bạ khác, trang chưa áp dụng. Quà tặng của KIA và Mazda lấy từ cột chính sách bán hàng của bảng giá, chỉ để tham khảo và không trừ vào giá. Ký hiệu giữ nguyên như bảng giá: BHTV là bảo hiểm thân vỏ, BHTC là bảo hiểm vật chất, 5tr là 5 triệu đồng, VC DV và SG giữ nguyên ký hiệu. Mức thực tế thay đổi theo quy định, khu vực và chương trình của đại lý. Liên hệ ThacoAuto Quảng Ninh để nhận báo giá chính xác.</p>
+</div>
+<script>
+// [hãng, dòng xe, phiên bản, giá công bố (triệu), giá bán cuối (triệu), 1 = xe sản xuất 2025, quà tặng theo bảng giá]
+const CARS=[
+["KIA","Sonet","1.5 Premium",609,544,1,"Đỏ"],
+["KIA","Sonet","1.5 Premium",584,584,0,"10tr+BHTV"],
+["KIA","Sonet","1.5 Luxury",529,517,0,"5tr+BHTV"],
+["KIA","Sonet","1.5 Deluxe",489,477,0,"5tr+BHTV"],
+["KIA","Sonet","1.5 AT",450,450,0,"5tr+BHTV"],
+["KIA","Seltos","1.5L Premium",689,679,0,"6tr+BHTV+SG"],
+["KIA","Seltos","1.5L Luxury",609,596,0,"BHTV+SG"],
+["KIA","Seltos","1.5L Deluxe",569,559,0,"6tr+BHTV+SG"],
+["KIA","Seltos","1.5L AT",549,535,0,"9tr+BHTV+SG"],
+["KIA","Carens","1.5G Luxury (Mới)",609,599,0,"5tr+BHTV"],
+["KIA","Carens","1.5G Deluxe (ghế simili, màn Android 8 inch)",559,559,0,"3tr+BHTV"],
+["KIA","Carens Clavis","1.5G Luxury",679,679,0,"8tr+BHTV"],
+["KIA","Carens Clavis","1.5G Deluxe",639,639,0,"8tr+BHTV"],
+["KIA","Sportage","1.6T Signature AWD",1009,979,0,"2tr+BHTV"],
+["KIA","Sportage","2.0G Signature",929,899,0,"3tr+BHTV"],
+["KIA","Sportage","2.0G Premium",819,769,0,"4tr+BHTV"],
+["KIA","New Sportage","1.6 Turbo HEV Signature AWD",1099,1099,0,"20tr+BHTC+VC DV (12tr)"],
+["KIA","New Sportage","1.6 Turbo HEV Signature",1049,1049,0,"20tr+BHTC+VC DV (12tr)"],
+["KIA","New Sportage","1.6 Turbo HEV Premium",999,999,0,"20tr+BHTC+VC DV (12tr)"],
+["KIA","New Sportage","2.0G Luxury (không phim cách nhiệt)",839,829,0,"15tr+BHTC+VC DV (12tr)"],
+["KIA","New Sportage","2.0G Deluxe",769,769,0,"20tr+BHTC+VC DV (12tr)"],
+["KIA","Sorento 2.2D","Signature AWD",1419,1359,0,"5tr+BHTV"],
+["KIA","Sorento 2.2D","Signature FWD",1339,1279,0,"2tr+BHTV"],
+["KIA","Sorento 2.5G","Signature AWD",1279,1266,0,"7tr+BHTV"],
+["KIA","Sorento 2.5G","Signature FWD",1199,1187,0,"7tr+BHTV"],
+["KIA","Sorento HEV","1.6 Turbo HEV Signature AWD",1399,1389,0,"20tr+BHTC+VC DV (12tr)"],
+["KIA","Sorento HEV","1.6 Turbo HEV Signature",1349,1339,0,"15tr+BHTC+VC DV (12tr)"],
+["KIA","Carnival HEV","1.6 Turbo HEV Signature 7S (hàng ghế 2 VIP)",1799,1799,0,"15tr+2 năm BHTV+VC DV (27tr)"],
+["KIA","Carnival HEV","1.6 Turbo HEV Signature 7S",1719,1719,0,"15tr+2 năm BHTV+VC DV (27tr)"],
+["KIA","Carnival HEV","1.6T HEV Premium 7S (hàng 2 VIP, tùy chọn nội thất)",1619,1619,0,"15tr+2 năm BHTV+VC DV (27tr)"],
+["KIA","Carnival HEV","1.6T HEV Premium 7S",1539,1539,0,"15tr+2 năm BHTV+VC DV (27tr)"],
+["KIA","Carnival HEV","1.6T HEV Luxury 8S (không dán phim, túi cứu hộ, bệ bước chân)",1399,1399,0,"5tr+2 năm BHTV+VC DV (27tr)"],
+["KIA","Carnival 2.2D","Signature 7S (hàng 2 VIP, tùy chọn nội thất)",1649,1604,0,"20tr"],
+["KIA","Carnival 2.2D","Signature 7S (tùy chọn màu nội thất)",1579,1534,0,"20tr"],
+["KIA","Carnival 2.2D","Signature 7S",1569,1519,0,"20tr"],
+["KIA","Carnival 2.2D","Signature 7S",1569,1420,1,""],
+["KIA","Carnival 2.2D","Premium 7S",1499,1459,0,"20tr"],
+["KIA","Carnival 2.2D","Premium 8S",1459,1419,0,"20tr"],
+["KIA","Carnival 2.2D","Luxury 8S",1299,1259,0,"20tr"],
+["KIA","K3","1.6 AT Luxury",584,545,1,""],
+["KIA","K3","1.6 AT Luxury",584,584,0,"Trắng: SG"],
+["KIA","K5","2.0 Luxury",769,759,0,"5tr"],
+["KIA","Morning","GT-Line",469,463,0,"BHTV"],
+["KIA","Morning","AT",439,415,1,""],
+["KIA","Morning","MT",325,309,0,"BHTV"],
+["KIA","Soluto","MT Deluxe",375,329,0,"BHTV"],
+["KIA","Soluto","MT",345,299,0,"BHTV"],
+["Mazda","Mazda2 Sedan","1.5 Luxury",494,475,0,"12tr+SG"],
+["Mazda","Mazda2 Sedan","1.5 Deluxe",459,443,0,"12tr+SG"],
+["Mazda","Mazda2 Sedan","1.5 AT (thêm tùy chọn: màn 7 inch, áo ghế, cam lùi; không dán phim)",429,419,0,"10tr+SG, phim Lexzenz HQ NanoCeramic"],
+["Mazda","Mazda2 Sedan","1.5 AT* (không dán phim)",418,399,0,"10tr+SG, phim Lexzenz HQ NanoCeramic"],
+["Mazda","Mazda2 Sedan","1.5 AT (xe tập lái)",399,399,0,""],
+["Mazda","Mazda2 Sport","1.5 Luxury",537,529,0,""],
+["Mazda","Mazda3 Sedan","1.5 Premium (E5)",719,669,0,""],
+["Mazda","Mazda3 Sedan","1.5 Luxury (E5)",644,555,1,"Đỏ"],
+["Mazda","Mazda3 Sedan","1.5 Luxury (E5)",644,599,0,"5tr+BHTV+SG"],
+["Mazda","Mazda3 Sedan","1.5 Deluxe (thêm tùy chọn)",599,574,0,"BHTV+SG"],
+["Mazda","Mazda3 Sedan","1.5 Deluxe* (E5, không dán phim, ốp cản sau, áo ghế, thảm sàn, lót cốp, túi cứu hộ)",569,559,0,"3tr+BHTV+SG"],
+["Mazda","Mazda3 Sport","1.5 Premium (E5)",719,704,0,"SG"],
+["Mazda","Mazda3 Sport","1.5 Luxury (E5)",659,619,0,"3tr+BHTV"],
+["Mazda","CX-3","1.5 Premium",619,619,0,"5tr+BHTV"],
+["Mazda","CX-3","1.5 Luxury",569,569,0,"2tr+BHTV"],
+["Mazda","CX-3","1.5 Deluxe",529,529,0,"5tr+BHTV"],
+["Mazda","CX-3","1.5 AT",499,499,0,"5tr+BHTV"],
+["Mazda","CX-30","2.0 Premium (không dán phim)",749,719,0,"10tr+BHTV, phim Lexzenz HQ NanoCeramic"],
+["Mazda","CX-30","2.0 Luxury (không dán phim)",699,659,0,"10tr+BHTV, phim Lexzenz HQ NanoCeramic"],
+["Mazda","CX-5","2.0 Pre Exclusive OP3 (không cảm biến áp suất lốp)",869,809,0,"20tr+BHTV"],
+["Mazda","CX-5","2.0 Premium Sport OP3",849,799,0,"20tr+BHTV"],
+["Mazda","CX-5","2.0 Premium Active OP3 (không cảm biến áp suất lốp)",829,779,0,"20tr+BHTV"],
+["Mazda","CX-5","2.0 Luxury OP3 (không cảm biến áp suất lốp)",789,738,0,"20tr+BHTV"],
+["Mazda","CX-5","2.0 Deluxe (thêm tùy chọn, không cảm biến áp suất lốp)",749,698,0,"20tr+BHTV"],
+["Mazda","CX-5","2.0 Deluxe* (không dán phim, baga mui, ốp cản sau, cảm biến lốp, thảm sàn, túi cứu hộ)",699,678,0,"20tr+BHTV"],
+["Mazda","CX-8","2.5 Signature AWD",1149,1089,0,"BHTV"],
+["Mazda","CX-8","2.5 Premium (không cảm biến áp suất lốp)",1019,979,0,"10tr+BHTV"],
+["Mazda","CX-8","2.5 Luxury (thêm tùy chọn, không cảm biến áp suất lốp)",949,919,0,"10tr+BHTV"],
+["Mazda","CX-8","2.5 Luxury* (không dán phim, baga mui, ốp cản sau, bệ bước chân, cảm biến lốp, thảm sàn, túi cứu hộ)",899,889,0,"BHTV"],
+["Mazda","MX-5","2.0 ST mui mềm AT/MT",1339,1339,0,"Thẻ thành viên Accor 1 năm (5tr)"],
+["Mazda","MX-5","2.0 RF mui cứng",1439,1439,0,"Thẻ thành viên Accor 1 năm (5tr)"],
+["Mazda","CX-60","3.3 Turbo HEV AWD",1699,1699,0,"15tr"],
+["Mazda","CX-90","2.5 PHEV AWD 7S",2299,2218,0,"15tr"],
+["Mazda","CX-90","3.3 Turbo HEV AWD 6S",2200,1949,0,"15tr"],
+["Mazda","CX-90","3.3 Turbo HEV AWD 7S",2150,1899,0,"15tr"]
+];
+const gift=c=>c[6]||"";
+const isColor=g=>g==="Đỏ"||g==="Trắng";
+const giftTxt=g=>isColor(g)?`ghi chú màu ${g} trong bảng giá`:g.replace(/BHTV/g,"BHTV (bảo hiểm thân vỏ)");
+const PROV={qn:["Quảng Ninh",.12,140000],hn:["Hà Nội",.12,20e6],hcm:["TP.HCM",.10,20e6],other:["Tỉnh thành khác",.10,1e6]};
+const FEE={dk:90000,db:1560000,tn:480700,vc:.012},LO=300,HI=2700;
+const GROUP={"Carens Clavis":"Carens","New Sportage":"Sportage","Sorento 2.2D":"Sorento","Sorento 2.5G":"Sorento","Sorento HEV":"Sorento","Carnival HEV":"Carnival","Carnival 2.2D":"Carnival","Mazda2 Sedan":"Mazda2","Mazda2 Sport":"Mazda2","Mazda3 Sedan":"Mazda3","Mazda3 Sport":"Mazda3","3008 All-New":"3008","5008 All-New":"5008","408 LE":"408"};
+const grp=c=>GROUP[c[1]]||c[1];
+const S={prov:"qn",brand:"Tất cả",model:"Tất cả"};
+const $=id=>document.getElementById(id);
+const d=n=>Math.round(n).toLocaleString("en-US");
+function calc(c){
+  const p=PROV[S.prov],cb=c[3]*1e6,sau=c[4]*1e6,tb=Math.round(cb*p[1]),vc=/BHTV|BHTC/.test(gift(c))?0:Math.round(sau*FEE.vc);
+  return {cb,ud:cb-sau,sau,tb,bs:p[2],vc,total:sau+tb+p[2]+FEE.dk+FEE.db+FEE.tn+vc};
+}
+function head(c,g){
+  const sub=c[1]!==g?c[1]+": ":"";
+  const m=c[2].match(/^([^(]+?)\s*\((.*)\)\s*$/);
+  const main=sub+(m?m[1]:c[2]),extra=[m?m[2]:"",c[5]?"Xe SX 2025":""].filter(Boolean).join(" | ");
+  return `<th>${main}${extra?`<small>${extra}</small>`:""}</th>`;
+}
+function table(G){
+  const p=PROV[S.prov],cols=G.v.map(c=>({c,x:calc(c)}));
+  const row=(l,f,cls)=>`<tr${cls?` class="${cls}"`:""}><td>${l}</td>${cols.map(r=>`<td>${d(f(r.x))}</td>`).join("")}</tr>`;
+  const gifts=cols.map(r=>gift(r.c));
+  const vcRow=cols.every(r=>!r.x.vc)?"":`<tr><td>Bảo hiểm vật chất (1 năm) *</td>${cols.map(r=>`<td>${r.x.vc?d(r.x.vc):"Tặng"}</td>`).join("")}</tr>`;
+  const gr=gifts.some(Boolean)?`<tr class="gf"><td>Quà tặng theo bảng giá (không trừ vào giá)</td>${gifts.map(g=>`<td>${g?giftTxt(g):"—"}</td>`).join("")}</tr>`:"";
+  return `<h2>BÁO GIÁ LĂN BÁNH XE ${G.brand.toUpperCase()} ${G.name.toUpperCase()}</h2><div class="sc"><table><thead><tr><th>Phiên bản</th>${cols.map(r=>head(r.c,G.name)).join("")}</tr></thead><tbody>
+  ${row("Giá công bố (đã bao gồm VAT)",x=>x.cb)}${row("Ưu đãi trong tháng",x=>x.ud,"sv")}${row("Giá bán sau ưu đãi",x=>x.sau,"hl")}
+  ${row(`Lệ phí trước bạ (${Math.round(p[1]*100)}%) *`,x=>x.tb)}${row("Phí đăng ký biển số *",x=>x.bs)}${row("Phí đăng kiểm *",()=>FEE.dk)}
+  ${row("Phí lưu hành đường bộ 1 năm",()=>FEE.db)}${row("Bảo hiểm trách nhiệm dân sự (1 năm) *",()=>FEE.tn)}${vcRow}
+  ${row("TỔNG TIỀN THANH TOÁN",x=>x.total,"tt")}${gr}</tbody></table></div>`;
+}
+function groups(){
+  const map=new Map();
+  CARS.forEach(c=>{
+    if(S.brand!=="Tất cả"&&c[0]!==S.brand)return;
+    const g=grp(c);if(S.model!=="Tất cả"&&g!==S.model)return;
+    const k=c[0]+"|"+g;if(!map.has(k))map.set(k,{brand:c[0],name:g,v:[]});
+    map.get(k).v.push(c);
+  });
+  return [...map.values()];
+}
+function render(){$("out").innerHTML=groups().map(table).join("")}
+function chips(){
+  const b=["Tất cả",...new Set(CARS.map(c=>c[0]))];
+  $("chips").innerHTML=b.map(s=>`<button type="button" data-b="${s}" aria-pressed="${s===S.brand}">${s}</button>`).join("");
+}
+function models(){
+  const m=["Tất cả",...new Set(CARS.filter(c=>S.brand==="Tất cả"||c[0]===S.brand).map(grp))];
+  $("model").innerHTML=m.map(s=>`<option${s===S.model?" selected":""}>${s}</option>`).join("");
+}
+$("prov").innerHTML=Object.entries(PROV).map(([k,v])=>`<option value="${k}">${v[0]}</option>`).join("");
+$("prov").addEventListener("change",e=>{S.prov=e.target.value;render()});
+$("model").addEventListener("change",e=>{S.model=e.target.value;render()});
+$("chips").addEventListener("click",e=>{const b=e.target.dataset.b;if(!b)return;S.brand=b;S.model="Tất cả";chips();models();render()});
+chips();models();render();
+</script>
+</body>
+</html>
